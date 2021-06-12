@@ -2,7 +2,7 @@
 <html lang="en-AU">
 
 <head>
-    <title></title>
+    <title>Home | Richelle Chen</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -10,14 +10,53 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+    <!-- Other libraries? -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
     <!-- External style sheet -->
     <link rel="stylesheet" href="mystyle.css">
-    
+
+    <!-- External JS -->
+    <script src="functionality.js"></script>
+
 </head>
 
 <body>
-    <div>
-        <p>hello</p>
+    <!-- Navigation Bar -->
+    <header id="navbar">
+        <nav class="navbar-container container">
+          <a href="/" class="home-link">
+            <div class="navbar-logo"></div>
+          </a>
+          <button type="button" class="navbar-toggle" aria-label="Open navigation menu">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <div class="navbar-menu">
+            <ul class="navbar-links">
+              <li class="navbar-item"><a class="navbar-link" href="/about">about me</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="/blog">work</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="/careers">GH</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="/contact">LI</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="/contact">EM</a></li>
+            </ul>
+          </div>
+        </nav>
+    </header>
+    <script src="functionality.js"></script>
+
+    <!-- Introduction content -->
+    <div class="container welcome">
+        <h1>welcome!</h1>
+        <p>my name is richelle. i'm a third year software engineering student at the university of western australia. thanks for stopping by! feel free to have a browse around, and have a great <span id="day">day</span> :-)</p>
+        <script>
+            var now = new Date();
+            var days = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+            var day = days[ now.getDay() ];
+            document.getElementById("day").innerHTML = day;
+        </script>
     </div>
 </body>
 
