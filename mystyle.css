@@ -7,41 +7,56 @@ body {
 
 h1 {
     color: #0e524b;
+    padding-bottom: 4%;
 }
 
 .welcome {
     padding-top: 10em;
+    /* max-width: 50%; */
+    /* background-image:url(cloud1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+    background-attachment: fixed; */
+
+    /* background-image:url(speech.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 50%;
+    background-attachment: fixed; */
 }
 
-
-
-/* my NAVBAR attempts */
-/* .navbar {
-    background-color: #ffffff7f;
-    list-style-type: none;
-    margin: 0;
-    padding: 10%;
-} */
-
-/* .navbar {
-    background-color: #ffffff55;
+.welcomecloud {
+    transform: scaleX(-1);
+    position:absolute;
+    top: 6em;
+    left: -10%;
+    z-index:-1;
+    width: 120%;
+    height: 50%;
 }
 
-.navbar-nav > li {
-    margin-left: 8%;
-    margin-right: 8%;
-} */
+.cloud3 {
+    position: fixed;
+    top: 15%;
+    left: -10%;
+    max-height: 60%;
+    z-index: -1;
+    opacity: 70%;
+}
 
 
 /* Navbar tutorial styling */
 :root {
-    --navbar-bg-color: #ffffff55;
+    --navbar-bg-color: #d0e5e8b9;
     --navbar-text-color-focus: #533318;
-    --navbar-bg-contrast: #ffffff55;
+    --navbar-text-color: #0e524b;
+    --navbar-bg-hover: #ffffff55;
+    --navbar-height: 64px;
 }
 
 .container {
-    max-width: 80%;
+    /* max-width: 80%; */
     padding-left: 1.4rem;
     padding-right: 1.4rem;
     margin-left: auto;
@@ -49,19 +64,37 @@ h1 {
 }
 
 #navbar {
-    --navbar-height: 64px;
     position: fixed;
     height: var(--navbar-height);
     background-color: var(--navbar-bg-color);
     left: 0;
     right: 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 4px rgba(43, 82, 116, 0.15);
 }
 
 .navbar-container {
+    height: 65%;  
+    float: right;
+    margin-top: 0.5em;
+
+    padding-left: 1em;
+    padding-right: 1em;
+    align-items: center;
+}
+
+/* .navbar-links {
+    list-style-type: none;
+    overflow: hidden;
+    position: absolute;
     display: flex;
-    justify-content: space-between;
-    height: 100%;
+    align-items: center;
+} */
+
+.contact-links {
+    list-style-type: none;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
     align-items: center;
 }
 
@@ -70,41 +103,34 @@ h1 {
     width: 100%;
 }
 
-.home-link,
 .navbar-link {
     color: var(--navbar-text-color);
     transition: color 0.2s ease-in-out;
-    text-decoration: none;
-    display: flex;
-    font-weight: 400;
-    align-items: center;
+    font-weight: 800;
     transition: background-color 0.2s ease-in-out,
                 color 0.2s ease-in-out;
-}
-
-.home-link:focus,
-.home-link:hover {
-    color: var(--navbar-text-color-focus);
-}
-
-.navbar-link {
+    text-decoration: none;
+    
+    display: flex;
     justify-content: center;
-    width: 100%;
     padding: 0.4em 0.8em;
-    border-radius: 5px;
+    border-radius: 30%;
+    align-items: center;
 }
 
-.navbar-link:focus,
+/* .navbar-link:focus, */
 .navbar-link:hover {
     color: var(--navbar-text-color-focus);
-    background-color: var(--navbar-bg-contrast);
+    background-color: var(--navbar-bg-hover);
+    text-decoration: none;
 }
 
 .navbar-logo {
-    background-color: var(--navbar-text-color-focus);
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    position: absolute;
+    top: -40px;
+    left: -30px;
+    width: 170px;
+    height: 170px;
     margin-right: 0.5em;
 }
 
@@ -125,15 +151,23 @@ h1 {
     width: 25px;
     height: 4px;
     margin: 2px;
+    border-radius: 10px;
     transition: background-color 0.2s ease-in-out,
                 transform 0.2s ease-in-out,
                 opacity 0.2s ease-in-out;
     background-color: var(--navbar-text-color);
 }
 
-.navbar-toggle:focus .icon-bar,
+/* .navbar-toggle:focus .icon-bar, */
 .navbar-toggle:hover .icon-bar {
     background-color: var(--navbar-text-color-focus);
+}
+
+/* trying to get rid of outline when clicked */
+.navbar-toggle:focus .icon-bar {
+    border: none;
+    outline: 0;
+    outline: none;
 }
 
 #navbar.opened .navbar-toggle .icon-bar:first-child,
@@ -159,8 +193,8 @@ h1 {
     position: fixed;
     top: var(--navbar-height);
     bottom: 0;
-    transition: opacity 0.2s ease-in-out,
-                visibility 0.2s ease-in-out;
+    /* transition: opacity 0.2s ease-in-out,
+                visibility 0.2s ease-in-out; */
     opacity: 0;
     visibility: hidden;
     left: 0;
@@ -173,6 +207,7 @@ h1 {
     visibility: visible;
 }
 
+/* !! */
 .navbar-links {
     list-style-type: none;
     max-height: 0;
@@ -224,4 +259,22 @@ h1 {
     #navbar .navbar-link:last-child {
         margin-right: 0;
     }
+}
+
+.contact-icon {
+    height: 1em;
+    width: 1em;
+    padding: 0%;
+    margin: 0%;
+}
+
+footer {
+    color: rgb(0, 0, 0);
+    font-size: small;
+    background-image: url(grass.png);
+    background-size: 25%;
+    opacity: 50%;
+    /* background-attachment: fixed; */
+    text-align: center;
+    padding: 3%;
 }

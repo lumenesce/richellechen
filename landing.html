@@ -2,7 +2,8 @@
 <html lang="en-AU">
 
 <head>
-    <title>Home | Richelle Chen</title>
+    <title>home | richelle chen</title>
+    <link rel="shortcut icon" href="favicon.ico"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,23 +12,24 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Other libraries? -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
 
     <!-- External style sheet -->
     <link rel="stylesheet" href="mystyle.css">
 
     <!-- External JS -->
-    <script src="functionality.js"></script>
+    <!-- <script src="functionality.js"></script> -->
 
 </head>
 
 <body>
     <!-- Navigation Bar -->
     <header id="navbar">
-        <nav class="navbar-container container">
-          <a href="/" class="home-link">
-            <div class="navbar-logo"></div>
+        <!-- no container class -->
+        <nav class="navbar-container">
+          <a href="landing.html" class="home-link">
+            <img src=logo.png class="navbar-logo">
           </a>
           <button type="button" class="navbar-toggle" aria-label="Open navigation menu">
               <span class="icon-bar"></span>
@@ -36,11 +38,17 @@
           </button>
           <div class="navbar-menu">
             <ul class="navbar-links">
-              <li class="navbar-item"><a class="navbar-link" href="/about">about me</a></li>
-              <li class="navbar-item"><a class="navbar-link" href="/blog">work</a></li>
-              <li class="navbar-item"><a class="navbar-link" href="/careers">GH</a></li>
-              <li class="navbar-item"><a class="navbar-link" href="/contact">LI</a></li>
-              <li class="navbar-item"><a class="navbar-link" href="/contact">EM</a></li>
+              <li class="navbar-item"><a class="navbar-link" style="width: 150px;" href="aboutme.html">about me</a></li>
+              <li class="navbar-item"><a class="navbar-link" style="width: 100%;" href="work.html">work</a></li>
+              <li class="navbar-item"><a class="navbar-link" style="width: 30%;" href="https://github.com/lumenesce" target=”_blank”>
+                <img src="github.png" class="contact-icon">
+              </a></li>
+              <li class="navbar-item"><a class="navbar-link" style="width: 30%;" href="https://www.linkedin.com/in/richellechen/" target=”_blank”>
+                <img src="linkedin.png" class="contact-icon">
+              </a></li>
+              <li class="navbar-item"><a class="navbar-link" style="width: 30%;" href="mailto:richellechen2000@gmail.com">
+                <img src="email.png" class="contact-icon">
+              </a></li>
             </ul>
           </div>
         </nav>
@@ -50,6 +58,8 @@
     <!-- Introduction content -->
     <div class="container welcome">
         <h1>welcome!</h1>
+        <!-- <img class="welcomecloud" src="cloud1.png"> -->
+        <img class="cloud3" src="cloud3.png">
         <p>my name is richelle. i'm a third year software engineering student at the university of western australia. thanks for stopping by! feel free to have a browse around, and have a great <span id="day">day</span> :-)</p>
         <script>
             var now = new Date();
@@ -58,6 +68,12 @@
             document.getElementById("day").innerHTML = day;
         </script>
     </div>
+
+    <div class="container">
+    <p>i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll i need more text to make this page scroll </p>
+  </div>
+
+    <footer class="container-fluid">Found a bug or have any feedback? Please shoot me an email!</footer>
 </body>
 
 </html>

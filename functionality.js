@@ -1,7 +1,3 @@
-var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-var day = days[ now.getDay() ];
-document.getElementsByID("day").innerHTML = day;
-
 // Navbar stuff
 const navbar = document.getElementById("navbar");
 const navbarToggle = navbar.querySelector(".navbar-toggle");
