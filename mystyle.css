@@ -10,6 +10,11 @@ h1 {
     padding-bottom: 4%;
 }
 
+h2 {
+    color: #0e524b;
+    padding-bottom: 2%;
+}
+
 .welcome {
     padding-top: 10em;
     /* max-width: 50%; */
@@ -26,6 +31,10 @@ h1 {
     background-attachment: fixed; */
 }
 
+.aboutme, .work {
+    padding-top: 5em;
+}
+
 .welcomecloud {
     transform: scaleX(-1);
     position:absolute;
@@ -38,7 +47,7 @@ h1 {
 
 .cloud3 {
     position: fixed;
-    top: 15%;
+    top: 5%;
     left: -10%;
     max-height: 60%;
     z-index: -1;
@@ -127,11 +136,18 @@ h1 {
 
 .navbar-logo {
     position: absolute;
-    top: -40px;
-    left: -30px;
-    width: 170px;
-    height: 170px;
+    top: -3.5em;
+    left: -4em;
     margin-right: 0.5em;
+    max-width: 400%;
+    max-height: 400%;
+    
+    /* top: -50%;
+    left: -50%;
+    margin-right: 0.5em;
+    width: 100%;
+    height: 100%; */
+    
 }
 
 .navbar-toggle {
@@ -269,12 +285,40 @@ h1 {
 }
 
 footer {
+    margin-top: 15em;
     color: rgb(0, 0, 0);
     font-size: small;
+    text-align: center;
+    padding: 1%;
+
     background-image: url(grass.png);
+    /* background-attachment: fixed; */
+    background-size: 40%;
+    opacity: 50%;
+}
+
+.contact-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+footer li {
+    display: inline-block;
+    margin: 2%;
+}
+
+.contact-link {
+    /* margin: 20%; */
+    max-height: 3em;
+    max-width: 3em;
+}
+
+/* .grass {
+    background-image: url(grass.png);
+    background-attachment: fixed;
     background-size: 25%;
     opacity: 50%;
-    /* background-attachment: fixed; */
-    text-align: center;
-    padding: 3%;
-}
+} */
